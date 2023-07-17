@@ -33,8 +33,6 @@ const COURSES = {
   pagination: (page = 1, size = 20) => `/courses/page=${page}&size=${size}`,
 };
 
-const ACCESS_TOKEN = process.env.REACT_APP_ACCESS_TOKEN;
-
 const API_URL = axios.create({
   baseURL: API
 });
@@ -46,6 +44,5 @@ export {
   COMMENTS,
   COURSES,
   API,
-  API_URL,
-  ACCESS_TOKEN,
+  API_URL
 };
