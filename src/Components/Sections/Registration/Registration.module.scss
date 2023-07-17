@@ -1,0 +1,140 @@
+.container {
+    width: 100%;
+    height: auto;
+    padding: 4rem 0;
+    position: relative;
+    overflow: hidden;
+    font-family: robot-medium;
+    background-size: cover;
+
+    .Registration {
+        width: 90%;
+        max-width: 1100px;
+        margin: auto;
+        border-radius: 12px;
+        color: white;
+        border: 0.5px solid rgba(194, 224, 255, 0.08);
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+        background: rgba(4, 15, 55, 0.47843137254901963);
+        transition: all 0.5s cubic-bezier(0.17, 0.17, 0.24, 1);
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        @media (max-width: 800px) {
+            .right {
+                text-align: center;
+            }
+        }
+
+        .left {
+            @media (max-width: 800px) {
+                display: none;
+            }
+            img {
+                max-height: 420px;
+                margin-bottom: -4px;
+                border-radius: 12px 0 0 12px;
+                object-fit: cover;
+
+                @media (max-width: 1000px) {
+                    display: none;
+                }
+            }
+        }
+        .right {
+            padding: 32px;
+
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            h3 {
+                font-size: 2rem;
+            }
+            p {
+                font-family: robot-thin;
+                letter-spacing: 1px;
+                line-height: 24px;
+                opacity: 0.7;
+            }
+            form {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                input {
+                    background: rgba(255, 255, 255, 0.15);
+                    color: white;
+                    &:before {
+                        content: "_"; // Any character can go here
+                        visibility: hidden !important;
+                    }
+                }
+                label {
+                    color: white;
+                }
+
+                button {
+                    margin-top: 12px;
+                }
+            }
+        }
+        position: relative;
+        z-index: 10;
+    }
+    .shape {
+        background: linear-gradient(
+            to right,
+            var(--color-primary),
+            var(--color-secondary-accent)
+        );
+        position: absolute;
+        animation-name: forShape;
+        animation-duration: 4s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-delay: 1s;
+        width: 160px;
+        height: 160px;
+        border-radius: 46% 54% 67% 33% / 58% 61% 39% 42%;
+
+        &:first-child {
+            top: 5%;
+            left: 5%;
+        }
+        &:nth-child(2) {
+            bottom: 5%;
+            right: 5%;
+            background: linear-gradient(to right, #ff512f, #f09819);
+        }
+    }
+}
+
+.phone {
+    width: 100% !important;
+    border: none !important;
+    border-radius: 0 !important;
+    font: inherit;
+    letter-spacing: inherit;
+    color: currentColor;
+    padding: 4px 0 5px;
+    border: 0;
+    box-sizing: content-box;
+    background: none;
+    height: 24px !important;
+    margin: 0;
+    display: block !important;
+    padding: 28px 16.5px !important;
+}
+.btnWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+@keyframes forShape {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

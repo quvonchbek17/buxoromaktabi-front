@@ -1,0 +1,115 @@
+:root {
+  --color-black: #000;
+  --color-gray: #cdd0d6;
+  --color-white: #fff;
+  --color-white80: hsla(0, 0%, 100%, 0.5019607843137255);
+  --color-white40: hsla(0, 0%, 100%, 0.3764705882352941);
+  --color-main-dark: #081336;
+  --color-underline: #d9d9d9;
+  --color-secondary-dark: #17202e;
+  --color-additional-dark: #464d66;
+  --color-main-accent: #9caff6;
+  --color-secondary-accent: #0416d2;
+  --color-primary: #3973cf;
+  --color-product-card-bg: linear-gradient(
+    360deg,
+    #3643b9 -35.85%,
+    #3643b8 -25.95%,
+    #3441b7 -16.05%,
+    #323fb4 -6.15%,
+    #2f3bb0 3.76%,
+    #2a37aa 13.66%,
+    #2532a4 23.56%,
+    #202c9d 33.46%,
+    #1a2795 43.37%,
+    #15218e 53.27%,
+    #101c88 63.17%,
+    #0b1882 73.07%,
+    #08147e 82.98%,
+    #06127b 92.88%,
+    #04107a 102.78%,
+    #041079 112.68%
+  );
+  --color-bg-no-script: #081336;
+  --color-desc-no-script: #7d7d7d;
+  --color-subtitle-no-script: #8a8a8a;
+  --color-link-no-script: #b0b0b0;
+  --color-title-no-script: #eee;
+  --color-bg-page-404: #081336;
+  --color-subtitle-page-404: #8a8a8a;
+  --color-title-page-404: #eee;
+  --container-width: 11.1rem;
+  --container-width-small: 8rem;
+  --header-height: 0.76rem;
+  --font-robot-black: robot-black;
+  --font-robot-bold: robot-bold;
+  --font-robot-medium: robot-medium;
+  --font-robot-thin: robot-thin;
+
+  // card color
+  --Raisin-black: hsl(240, 20%, 17%);
+  --Silver-chalice: hsl(0, 0%, 67%);
+  --Blue-jeanse: hsl(202, 100%, 50%);
+  --Dark-Blue-jeanse: hsl(202, 100%, 16%);
+  --Xiketic: hsl(240, 21%, 9%);
+  --Xiketic-black: #081336;
+  --space-cadet: rgb(34, 47, 73, 0.4);
+
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-additional-dark);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgb(255, 255, 255);
+  }
+
+  .special-label {
+    display: none !important;
+  }
+  .selected-flag {
+    display: none !important;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+@font-face {
+  font-family: robot-black;
+  src: url("../public/Assets/Roboto/Roboto-Black.ttf");
+}
+@font-face {
+  font-family: robot-bold;
+  src: url("../public/Assets/Roboto/Roboto-Bold.ttf");
+}
+@font-face {
+  font-family: robot-medium;
+  src: url("../public/Assets/Roboto/Roboto-Medium.ttf");
+}
+@font-face {
+  font-family: robot-thin;
+  src: url("../public/Assets/Roboto/Roboto-Thin.ttf");
+}
+body {
+  position: relative;
+  font-family: var(--font-robot-thin);
+  background-color: var(--color-main-dark);
+  overflow-x: hidden;
+  // min-height: 300vh;
+}
+
+html {
+  @media (max-width: 400px) {
+    font-size: 14px;
+  }
+  @media (max-width: 360px) {
+    font-size: 12px;
+  }
+  @media (max-width: 300px) {
+    font-size: 10px;
+  }
+}

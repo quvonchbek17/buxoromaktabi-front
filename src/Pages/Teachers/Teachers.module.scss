@@ -1,0 +1,13 @@
+.teachers {
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+
+  h1 {
+    font-size: 3rem;
+    font-family: robot-bold;
+    text-align: center;
+  }
+}

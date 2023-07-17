@@ -1,0 +1,11 @@
+.MuiPaginationItem-root {
+  color: white !important;
+}
+@media screen and (max-width: 512px) {
+  .MuiPaginationItem-root {
+    margin: 0 2px !important;
+    min-width: 25px !important;
+    min-height: 25px !important;
+    height: 35px !important;
+  }
+}

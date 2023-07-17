@@ -1,0 +1,128 @@
+.wrapper-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  ::-webkit-scrollbar {
+    width: 2px !important;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-additional-dark);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgb(255, 255, 255);
+  }
+  .bid-info {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .img-box {
+      display: flex;
+      padding-left: 10px;
+      img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+      }
+    }
+
+    p {
+      color: var(--Silver-chalice);
+      font-size: 14px;
+      font-weight: 600;
+      transition: all 0.25s ease;
+
+      &:hover {
+        color: var(--color-white);
+      }
+    }
+  }
+
+  .share-btn {
+    outline: none;
+    border: none;
+    background: none;
+    font: inherit;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-radius: 50%;
+    transition: all 0.25s ease;
+    font-size: 18px;
+
+    .icon {
+      color: var(--Silver-chalice);
+    }
+  }
+}
+
+.title {
+  display: -webkit-inline-box;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-line-clamp: 1;
+  font-size: 20px;
+  margin-bottom: 5px;
+  font-family: var(--font-robot-bold);
+
+  @media (max-width: 600px) {
+    font-size: 16px;
+  }
+}
+
+.description {
+  height: 120px;
+  margin: 15px 0;
+  overflow-y: auto;
+
+  p {
+    color: var(--Silver-chalice);
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 600;
+
+    @media (max-width: 600px) {
+      font-size: 13px;
+    }
+  }
+}
+
+.wrapper-bottom {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  .price {
+    font-family: var(--font-robot-bold);
+    color: var(--Blue-jeanse);
+    font-weight: 600;
+  }
+  .view {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    bottom: 5px;
+    right: 5px;
+    background: #1a2980; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      var(--color-white),
+      var(--Silver-chalice)
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      var(--color-white),
+      var(--Silver-chalice)
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    clip-path: polygon(1% 100%, 40% 60%, 74% 100%, 59% 82%, 79% 71%, 98% 100%);
+
+    span {
+      font-size: 12px;
+    }
+  }
+}

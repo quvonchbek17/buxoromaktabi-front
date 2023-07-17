@@ -1,0 +1,42 @@
+.comment-section {
+  position: relative;
+  padding: 5rem 0;
+
+  .comment-background {
+    .bg-ellipse {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100%;
+      z-index: -2;
+      img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    font-family: robot-thin;
+    color: white;
+    gap: 12px;
+    .top {
+      display: flex;
+
+      flex-direction: column;
+      gap: 8px;
+      h2 {
+        font-size: 2rem;
+      }
+      p {
+        color: var(--color-gray);
+      }
+      h2,
+      p {
+        text-align: center;
+      }
+    }
+  }
+}

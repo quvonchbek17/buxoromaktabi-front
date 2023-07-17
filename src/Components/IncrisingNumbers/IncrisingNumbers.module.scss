@@ -1,0 +1,66 @@
+.results {
+    width: 100%;
+    color: #fff;
+    display: grid;
+    justify-content: center;
+    grid-row-gap: 30px;
+    * {
+        text-align: center;
+    }
+    .title {
+        all: unset;
+        text-transform: uppercase;
+        margin: 8px 0;
+        font-size: 3rem;
+        font-weight: 900;
+        color: #fff;
+        margin-bottom: 10px;
+        font-family: robot-bold;
+    }
+    .desc {
+        color: var(--color-gray);
+    }
+}
+
+.CountUps {
+    color: #fff;
+    .CountUp {
+        font-size: 80px;
+        color: white;
+        font-family: "robot-bold";
+        font-weight: 600;
+        @media (max-width: 1024px) {
+            font-size: 60px;
+        }
+        @media (max-width: 768px) {
+            font-size: 40px;
+        }
+    }
+    @media (max-width: 1024px) {
+        width: 180px;
+    }
+}
+.btns {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.numbers {
+    display: grid;
+    width: 900px;
+    grid-template-columns: repeat(4, 1fr);
+    @media (max-width: 1000px) {
+        width: auto;
+    }
+    @media (max-width: 730px) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    @media (max-width: 520px) {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 12px;
+        justify-items: center;
+    }
+}

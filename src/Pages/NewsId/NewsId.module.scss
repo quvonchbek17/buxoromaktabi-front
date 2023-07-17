@@ -1,0 +1,18 @@
+.dynamic-news-box {
+  padding: 2rem 0;
+
+  .news-id-background {
+    .bg-ellipse {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 30rem;
+      z-index: -2;
+      img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+}

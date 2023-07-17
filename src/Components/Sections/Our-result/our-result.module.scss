@@ -1,0 +1,18 @@
+.result-section {
+  position: relative;
+  padding: 4rem 0;
+  .result-background {
+    .bg-ellipse {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 30rem;
+      z-index: -2;
+      img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+}

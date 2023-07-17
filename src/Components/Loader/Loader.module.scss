@@ -1,0 +1,21 @@
+.Loader {
+  width: 100%;
+  background-color: var(--color-bg-page-404);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 30000000;
+  h2 {
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 4px;
+    font-family: robot-bold;
+  }
+}

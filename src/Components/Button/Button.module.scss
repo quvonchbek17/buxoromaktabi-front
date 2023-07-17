@@ -1,0 +1,169 @@
+@mixin primary-btn {
+  align-items: center;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  padding: 11px 26px;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+@mixin link-btn {
+  align-items: center;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  white-space: nowrap;
+  width: fit-content;
+  color: var(--color-white);
+
+  span {
+    position: relative;
+    margin-right: 10px;
+
+    &::after {
+      background: var(--color-white);
+      bottom: 0;
+      content: "";
+      height: 1px;
+      position: absolute;
+      transition: width 0.42s cubic-bezier(0.57, 0, 0.43, 1);
+      right: 0;
+      width: 0;
+    }
+  }
+  .icon-right {
+    position: relative;
+    overflow: hidden !important;
+    display: flex;
+    align-items: center;
+    width: 10px;
+    height: 15px;
+
+    img {
+      position: absolute;
+      right: 0;
+    }
+  }
+
+  &:hover {
+    span {
+      &::after {
+        left: 0;
+        width: 100%;
+      }
+    }
+    .icon-right {
+      img {
+        animation-duration: 0.85s;
+        animation-fill-mode: both;
+        animation-name: arrow-move;
+        animation-timing-function: cubic-bezier(0.72, 0, 0.28, 1);
+      }
+    }
+  }
+}
+// button
+.button {
+  all: unset;
+  overflow: hidden;
+  position: relative;
+  font-family: robot-bold;
+  user-select: none;
+  z-index: 1;
+}
+// primary
+.primary {
+  @include primary-btn();
+  background: var(--color-white);
+  color: var(--color-black);
+  transition: color 0.3s cubic-bezier(0.66, 0, 0.34, 1);
+  &::after {
+    content: "";
+    background: var(--color-primary);
+    border-radius: 50%;
+    height: 65px;
+    left: 50%;
+    pointer-events: none;
+    position: absolute;
+    top: 100%;
+    transform: translate(-50%);
+    transition: transform 0.3s cubic-bezier(0.66, 0, 0.34, 1);
+    width: 150%;
+    z-index: 0;
+  }
+  &:hover {
+    &::after {
+      transform: translate(-50%, -80%);
+    }
+    color: var(--color-white);
+  }
+}
+
+// primary-outline
+.primary-outline {
+  @include primary-btn();
+  color: var(--color-white);
+  border: 1px solid hsla(0, 0%, 100%, 0.3137254901960784);
+  transition: border-color 333ms cubic-bezier(0.68, 0, 0.83, 0.83);
+
+  &:hover {
+    border-color: var(--color-white);
+  }
+}
+
+// link-hover-button
+.link-hover {
+  @include link-btn();
+}
+
+// link
+.link {
+  color: var(--color-white);
+  opacity: 0.6;
+  cursor: pointer;
+  transition: opacity 333ms cubic-bezier(0.68, 0, 0.83, 0.83);
+  &:hover {
+    opacity: 1;
+  }
+}
+
+// nav-link
+.nav-link {
+  @include link-btn();
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 333ms cubic-bezier(0.68, 0, 0.83, 0.83);
+  &:hover {
+    opacity: 1;
+  }
+}
+
+// disabled
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+span {
+  z-index: 2;
+}
+.active{
+  opacity: 1 !important;
+}
+
+// animation
+@keyframes arrow-move {
+  0% {
+    right: 0;
+    opacity: 1;
+  }
+  50% {
+    right: -100%;
+    opacity: 0;
+  }
+  100% {
+    right: 0%;
+    opacity: 1;
+  }
+}
